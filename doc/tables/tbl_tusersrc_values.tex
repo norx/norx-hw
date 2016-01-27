@@ -1,0 +1,78 @@
+\begin{longtable}{@{}cX@{}}
+  \caption{Values of the lower byte of the signal
+    \texttt{SlaveTUser\_SI} and its meanings to the NORX
+    architecture.}
+ \label{tbl:tusersrc_values} \\
+ \toprule
+  \textbf{Value} & \textbf{Description} \\
+	\midrule
+  %
+  0 & %
+  Nothing to be done at all. \\
+	\midrule
+  %
+  1 & %
+  Indicates that both a new nonce (\texttt{TDataSrc\_(767:640)}) and
+  an new cipherkey (\texttt{TDataSrc\_(639:384)}) have been applied at
+  the data input and the next incoming data block will be a header
+  block (i.e., associated data). \\
+  % 
+  2 & %
+  Indicates that both a new nonce (\texttt{TDataSrc\_(767:640)}) and
+  an new cipherkey (\texttt{TDataSrc\_(639:384)}) have been applied at
+  the data input and the next incoming data block will be a payload
+  block. \\ \midrule
+  % 
+  3 & %
+  Indicates that a new AD block is applied and the next input block
+  will also be an AD block. \\
+  %
+  4 & %
+  Indicates that a new AD block is applied and the next input block
+  will be a payload block (i.e., plaintext or ciphertext). \\
+  %
+  5 & %
+  Indicates that a new AD block is applied and next the authentication
+  tag should be computed (i.e., no data can be obtained from the
+  source as the NORX architecture will be busy with computing the
+  tag). \\ \midrule
+  %
+  6 & %
+  Indicates that a new plaintext block is applied and that the next
+  input block will also be a plaintext block. \\
+  %
+  7 & %
+  Indicates that a new plaintext block is applied and that the next
+  input block will be a trailer block. \\
+  %
+  8 & %
+  Indicates that a new plaintext block is applied and that next the
+  authentication tag should be computed. \\ \midrule
+  %
+  9 & %
+  Indicates that a new ciphertext block is applied and that the next
+  input block will also be a ciphertext block. \\
+  %
+  10 & %
+  Indicates that a new ciphertext block is applied and that the next
+  input block will be a trailer block. \\
+  %
+  11 & %
+  Indicates that a new ciphertext block is applied and that next the
+  authentication tag should be computed. \\ \midrule
+  %
+  12 & %
+  Indicates that a new trailer block is applied and that the next
+  input block is another trailer block. \\
+  %
+  13 & %
+  Indicates that a new trailer block is applied and that next that
+  authentication tag should be computed. \\
+  \bottomrule
+\end{longtable}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../norx-hw_doc"
+%%% End: 
