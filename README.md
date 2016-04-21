@@ -1,6 +1,6 @@
-# About
+# NORX Hardware Reference Implementation
 
-The reference hardware implementation of the authenticated encryption (AE)
+This is the reference hardware implementation of the authenticated encryption
 cipher [NORX](https://norx.io/), which is a permutation-based candidate of the
 [CAESAR](http://competitions.cr.yp.to/caesar.html) competition. The provided
 architecture offers the functionality of NORX64-4-1, i.e., the recommended
@@ -20,13 +20,11 @@ as submitted to the second round of the CAESAR competition.
 
 # Documentation
 
-A very brief documentation of the architecture can be found
+A brief documentation of the architecture can be found
 [here](doc/out/norx-hw_doc.pdf).
 
-# Repository Content
-```
-.
-|-- README.md ... This file
-|-- doc       ... Very brief documentation
-`-- src       ... The actual VHDL hardware implementation of NORX64-4-1
-```
+# License
+
+The VHDL code is released under the
+[SOLDERPAD HARDWARE LICENSE v0.51](http://solderpad.org/licenses/SHL-0.51/). The
+full license text is included in the LICENSE file.
